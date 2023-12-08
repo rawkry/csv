@@ -52,6 +52,9 @@ export default function Home({ datamodel: serverDatamodel, fetched }: any) {
       formData.append("csvFile", data.csvFile[0]);
       const response = await fetch(`${url}/datamodel/upload`, {
         method: "POST",
+        headers: {
+          ...headers,
+        },
         body: formData,
       });
       const datamodel = await response.json();
