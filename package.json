@@ -1,0 +1,14 @@
+{
+  "name": "csv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn dev",
+    "server": "cd server && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
